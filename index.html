@@ -3,146 +3,42 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Andrea Scales — Portfolio</title>
-  <style>
-    :root{--bg:#0f1720;--card:#111827;--muted:#94a3b8;--accent:#7dd3fc}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial}
-    body{background:linear-gradient(180deg,#071026 0%, #081226 60%);color:#e6eef6;display:flex;align-items:center;justify-content:center;padding:32px}
-    .card{width:100%;max-width:760px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:28px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
-    h1{margin:0;font-size:2.2rem;letter-spacing:-0.02em}
-    .tagline{color:var(--accent);margin-top:6px;font-weight:600}
-    p.bio{color:var(--muted);margin:18px 0 22px;line-height:1.5}
-    .links{display:flex;flex-direction:column;gap:8px}
-    .link{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:8px;background:rgba(255,255,255,0.01);text-decoration:none;color:inherit;border:1px solid rgba(255,255,255,0.02)}
-    .link:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(3,7,18,0.6)}
-    .fav{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;color:#04263a;font-weight:700}
-    .small{color:var(--muted);font-size:0.9rem;margin-top:12px}
-    form.add{display:flex;gap:8px;margin-top:14px}
-    form.add input{flex:1;padding:8px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
-    form.add button{padding:8px 12px;border-radius:8px;border:none;background:var(--accent);color:#04263a;font-weight:600;cursor:pointer}
-    .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;color:var(--muted);font-size:0.9rem}
-    @media (max-width:520px){h1{font-size:1.6rem}}
-  </style>
+  <title>Andrea Scales — Product Designer</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <main class="card" id="app">
-    <header>
-      <h1 id="name">Andrea Scales</h1>
-      <div class="tagline">Designing thoughtful interfaces · building web experiences</div>
-    </header>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <p class="bio" id="bio">
-      I build accessible, responsive web apps and small open-source tools. I enjoy turning design intent into clean, maintainable code and shipping pragmatic features that help people.
-    </p>
+  <main>
+    <section class="hero">
+      <h1>Andrea Scales</h1>
+      <p>Product Designer — designing experiences that empower entrepreneurs</p>
+      <a class="cta" href="projects.html">View My Work</a>
+    </section>
 
-    <section aria-labelledby="links-heading">
-      <h2 id="links-heading" style="font-size:1rem;margin:0 0 8px;color:var(--muted)">Quick links</h2>
-
-      <div class="links" id="links"></div>
-
-      <form class="add" id="addForm" aria-label="Add a link">
-        <input id="linkTitle" placeholder="Link title (e.g., Projects)" required />
-        <input id="linkUrl" placeholder="https://example.com" required />
-        <button type="submit">Add</button>
-      </form>
-
-      <div class="small meta">
-        <div>Tip: add links above — they persist in your browser.</div>
-        <div id="count" style="margin-left:auto"></div>
+    <section class="featured">
+      <h2>Featured Work</h2>
+      <div class="project-list">
+        <!-- Each item links to projects.html; later you can make separate case-study pages -->
+        <article>
+          <img src="assets/images/shopify-onboarding-thumb.jpg" alt="Merchant onboarding">
+          <h3>Shopify Merchant Onboarding Redesign</h3>
+          <p>Improving launch success for new merchants.</p>
+        </article>
+        <!-- add more thumbnails -->
       </div>
     </section>
   </main>
 
-  <script>
-    // Dynamic links (defaults). Users can add new links; stored in localStorage.
-    const defaultLinks = [
-      {title: "Projects", url: "projects.html"},
-      {title: "GitHub", url: "https://github.com/AndreaScales"},
-      {title: "Resume", url: "resume.pdf"},
-      {title: "Contact", url: "mailto:hello@andreascales.example"}
-    ];
-
-    const LS_KEY = "site.links.v1";
-
-    function loadLinks(){
-      try{
-        const raw = localStorage.getItem(LS_KEY);
-        if(raw) return JSON.parse(raw);
-      }catch(e){}
-      return defaultLinks;
-    }
-
-    function saveLinks(list){
-      try{ localStorage.setItem(LS_KEY, JSON.stringify(list)); }catch(e){}
-    }
-
-    function el(tag, attrs = {}, ...children){
-      const n = document.createElement(tag);
-      for(const k in attrs) if(k === "class") n.className = attrs[k]; else if(k.startsWith("data-")) n.setAttribute(k, attrs[k]); else n[k] = attrs[k];
-      children.forEach(c => { if(typeof c === "string") n.appendChild(document.createTextNode(c)); else if(c) n.appendChild(c); });
-      return n;
-    }
-
-    function renderLinks(){
-      const container = document.getElementById("links");
-      container.innerHTML = "";
-      const links = loadLinks();
-      links.forEach((l, i) => {
-        const a = el("a", {href: l.url, class:"link", target: l.url.startsWith("http") ? "_blank" : "_self", rel: l.url.startsWith("http") ? "noopener noreferrer" : ""});
-        const fav = el("div", {class:"fav"}, (l.title[0]||"?").toUpperCase());
-        const txt = el("div", {}, el("div", {style:"font-weight:600"}, l.title), el("div", {style:"color:var(--muted);font-size:0.9rem"}, l.url));
-        const remove = el("button", {class:"remove", title:"Remove", style:"margin-left:auto;background:none;border:none;color:var(--muted);cursor:pointer"}, "✕");
-        remove.addEventListener("click", (ev) => {
-          ev.preventDefault(); ev.stopPropagation();
-          links.splice(i,1); saveLinks(links); renderLinks();
-        });
-        a.appendChild(fav);
-        a.appendChild(txt);
-        a.appendChild(remove);
-        container.appendChild(a);
-      });
-      document.getElementById("count").textContent = `${links.length} links`;
-    }
-
-    document.getElementById("addForm").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const title = document.getElementById("linkTitle").value.trim();
-      let url = document.getElementById("linkUrl").value.trim();
-      if(!/^https?:\/\//i.test(url) && !/^[^@]+@[^@]+\.[^@]+$/.test(url) && !url.endsWith(".html") && !url.endsWith(".pdf")){
-        url = "https://" + url;
-      }
-      const links = loadLinks();
-      links.push({title, url});
-      saveLinks(links);
-      document.getElementById("linkTitle").value = "";
-      document.getElementById("linkUrl").value = "";
-      renderLinks();
-    });
-
-    // If ?link=GitHub or ?link=Projects in URL, highlight first matching link
-    function maybeHighlightFromQuery(){
-      const params = new URLSearchParams(location.search);
-      const q = params.get("link");
-      if(!q) return;
-      const links = document.querySelectorAll("#links .link");
-      links.forEach(a => {
-        if(a.textContent.toLowerCase().includes(q.toLowerCase())){
-          a.style.boxShadow = "0 10px 30px rgba(125,211,252,0.12)";
-          a.style.borderColor = "rgba(125,211,252,0.25)";
-          a.scrollIntoView({behavior:"smooth",block:"center"});
-        }
-      });
-    }
-
-    // Expose a small API on window for quick automation in browser console
-    window.site = {
-      getLinks: () => loadLinks(),
-      resetLinks: () => { localStorage.removeItem(LS_KEY); renderLinks(); }
-    };
-
-    // initial render
-    renderLinks();
-    setTimeout(maybeHighlightFromQuery, 250);
-  </script>
+  <footer>
+    <p>Find me: <a href="https://www.linkedin.com">LinkedIn</a> • <a href="https://github.com/yourusername">GitHub</a></p>
+  </footer>
 </body>
 </html>
