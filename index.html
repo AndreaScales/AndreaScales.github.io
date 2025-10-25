@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,24 +6,62 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Andrea Scales — Product Designer</title>
   <link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/script.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
+
 <body>
+  <div class="floating-circles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+   <!-- Navigation bar -->
+    <nav class="nav-bar">
+      <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#">Growth Journal</a></li>
+    </ul>
+  </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Andrea Scales</h1>
-      <p>Product Designer — designing experiences that empower entrepreneurs</p>
+    <section class="hero" data-aos="fade-up">
+      <img src="assets/images/headshot.jpg" alt="Andrea Scales" class ="profile-pic" />
+      <div class="intro-text" data-aos="fade-right">
+      <h1>Hello, I'm <span>Andrea Scales</span></h1>
+      <p>Aspiring Product Designer Apprentice | Innovator | Tech-Enthusiast | Creative Problem-Solver</p>
       <a class="cta" href="projects.html">View My Work</a>
+    </div>   
     </section>
 
+    <!--Pathways to PM section-->
+    <section class="pathways">
+      <h2>Pathways to PM</h2>
+      <div class="bubbles">
+        <div class="bubble">Miss 1911</div>
+        <div class="bubble">Ambassador</div>
+        <div class="bubble">Training Chair</div>
+      </div>
+    </section>
+
+    <!--Projects Preview-->
+  <section class="projects-preview">
+    <h2>Featured Projects</h2>
+    <div class="project-cards">
+      <div class="card">Spotify Recommendation App</div>
+      <div class="card">AI Assistant (OpenAI API)</div>
+      <div class="card">Custom Dreams Branding</div>
+    </div>
+  </section>
+
+    <!--Projects Preview ORIGINAL, may have to change class name in CSS-->
     <section class="featured">
       <h2>Featured Work</h2>
       <div class="project-list">
@@ -37,8 +76,30 @@
     </section>
   </main>
 
-  <footer>
-    <p>Find me: <a href="https://www.linkedin.com">LinkedIn</a> • <a href="https://github.com/yourusername">GitHub</a></p>
+<!--footer page-->
+  <footer class="footer">
+    <p>Connect with me:</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/AndreaScales">LinkedIn</a>
+      <a href="https://github.com/AndreaScales">GitHub</a>
+      <a href="mailto:andreascales8@gmail.com">Email</a>
+    </div>
   </footer>
+
+  <!--Data AOS animation-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<!--GSAP(GreenSock Animation Platform) library-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<!--Three.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<!--Typed.js-->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
 </body>
 </html>
