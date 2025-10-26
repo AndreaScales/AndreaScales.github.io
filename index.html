@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,41 +8,48 @@
   <link rel="stylesheet" href="assets/css/style.css">
 <script src="assets/js/script.js"></script>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<!--import TailwindCSS-->
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body>
-
   <header>
+
    <!-- Navigation bar -->
-    <nav class="nav-bar">
-      <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="growthjournal.html">Growth Journal</a></li>
-    </ul>
-  </nav>
-  </header>\
+    <nav class="flex justify-between items-center p-6 bg-black border-b border-pink-500">
+      <h1 class="text-2xl font-bold text-pink-500">Andrea Scales</h1>
+      <div class="space-x-6">
+      <a href="index.html" class="text-white hover:text-pink-500 transition">Home</a>
+      <a href="projects.html" class="text-white hover:text-pink-500 transition">Projects</a>
+      <a href="about.html" class="text-white hover:text-pink-500 transition">About</a>
+      <a href="contact.html" class="text-white hover:text-pink-500 transition">Contact</a>
+      <a href="growthjournal.html" class="text-white hover:text-pink-500 transition">Growth Journal</a>
+      </div>
+    </nav>
+  </header>
 
   <!--Intro-->
   <main>
-    <section class="hero" data-aos="fade-up">
-      <img src="assets/images/headshot.jpg" alt="Andrea Scales" class ="profile-pic" />
-      <div class="intro-text" data-aos="fade-right">
-      <h1>Hello, I'm <span>Andrea Scales</span></h1>
-      <p>Aspiring Product Designer Apprentice | Innovator | Tech-Enthusiast | Creative Problem-Solver</p>
-      <a class="cta" href="projects.html">View My Work</a>
-    </div>   
+    <section class="flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-black to-gray-900 space-y-6"> <!--data-aos="fade-up"-->
+      <img src="assets/images/headshot.jpg" alt="Andrea Scales" class ="rounded-full w-32 h-32 mb-4 border-4 border-pink-500 shadow-lg">
+      <h1 class="text-4xl font-bold text-pink-500 mb-2">Hi, I'm <span>Andrea 👋</span></h1>
+      <p class="text-lg text-gray-300 max-w-md" ma>Aspiring Product Designer Apprentice | Innovator | Tech-Enthusiast | Creative Problem-Solver</p>
+      <a class="mt-16 px-6 py-3 bg-pink-500 text-black font-bold rounded-full hover:bg-pink-400 transition" href="projects.html">View My Work</a>  
     </section>
 
     <!--Pathways to PM section-->
-    <section class="pathways">
-      <h2>Pathways to PM</h2>
-      <div class="bubbles">
-        <div class="bubble">Miss 1911</div>
-        <div class="bubble">Ambassador</div>
-        <div class="bubble">Training Chair</div>
+    <section class="py-16 bg-black text-center">
+      <h2 class="text-3x1 font-bold text-pink-500 mb-10">Pathways to PM</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4x1 mx-auto">
+        <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
+          <h4 class="text-xl font-semibold text-white mb-2">Ambassador Leadership</h4>
+          <p class="text-gray-400 text-sm">Empowering campus unity as Training Chair for LUAO.</p>
+        </div>
+
+        <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
+          <h4 class="text-xl font-semibold text-white mb-2">Development Project Manager</h4>
+          <p class="text-gray-400 text-sm">Assisting Paycom’s project teams as a Development Project Manager Intern.</p>
+        </div>
       </div>
     </section>
 
@@ -55,28 +63,17 @@
     </div>
   </section>
 
-    <!--Projects Preview ORIGINAL, may have to change class name in CSS-->
-    <section class="featured">
-      <h2>Featured Work</h2>
-      <div class="project-list">
-        <!-- Each item links to projects.html; later you can make separate case-study pages -->
-        <article>
-          <img src="assets/images/shopify-onboarding-thumb.jpg" alt="Merchant onboarding">
-          <h3>Shopify Merchant Onboarding Redesign</h3>
-          <p>Improving launch success for new merchants.</p>
-        </article>
-        <!-- add more thumbnails -->
-      </div>
-    </section>
+
   </main>
 
 <!--footer page-->
-  <footer class="footer">
+  <footer class="p-6 border-t border-pink-500 text-center text-gray-400">
     <p>Connect with me:</p>
     <div class="social-icons">
       <a href="https://www.linkedin.com/in/AndreaScales">LinkedIn</a>
       <a href="https://github.com/AndreaScales">GitHub</a>
       <a href="mailto:andreascales8@gmail.com">Email</a>
+      <p>© 2025 Andrea Scales | Built with ❤️ and Tailwind CSS</p>
     </div>
   </footer>
 
