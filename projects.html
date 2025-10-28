@@ -6,45 +6,88 @@
   <title>Andrea Scales — Product Designer</title>
   <link rel="stylesheet" href="assets/css/style.css">
 <script src="assets/js/script.js"></script>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
 <!--import TailwindCSS-->
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
   <header>
     <!-- Navigation bar -->
-     <nav class="flex justify-between items-center p-6 bg-black border-b border-pink-500">
-       <h1 class="text-2xl font-bold text-pink-500">Andrea Scales</h1>
-       <div class="space-x-6">
-       <a href="index.html" class="text-white hover:text-pink-500 transition">Home</a>
-       <a href="projects.html" class="text-white hover:text-pink-500 transition">Projects</a>
-       <a href="about.html" class="text-white hover:text-pink-500 transition">About</a>
-       <a href="contact.html" class="text-white hover:text-pink-500 transition">Contact</a>
-       <a href="growthjournal.html" class="text-white hover:text-pink-500 transition">Growth Journal</a>
-       </div>
-     </nav>
+    <ul class="flex">
+      <li class="flex-1 mr-2">
+        <a href="index.html" class="block py-2 px-4 text-gray-400 cursor-not-allowed" href="#">Home</a>
+      </li>
+      <li class="flex-1 mr-2">
+        <a href="projects.html" class="text-center block border border-pink-500 rounded py-2 px-4 bg-pink-500 hover:bg-pink-700 text-white" href="#">Projects</a>
+      </li>
+      <li class="text-center flex-1">
+        <a href=contact.html class="text-center block border border-white rounded hover:border-gray-200 text-pink-500 hover:bg-gray-200 py-2 px-4" href="#">Contact</a>
+      </li>
+      <li class="text-center flex-1">
+        <a href="about.html" class="block py-2 px-4 text-gray-400 cursor-not-allowed" href="#">About</a>
+      </li>
+    </ul>
    </header>
 
   <main>
-    <section class="hero">
-      <h1>Andrea Scales</h1>
-      <p>Product Designer — designing experiences that empower entrepreneurs</p>
-      <a class="cta" href="projects.html">View My Work</a>
+    <section class="justify-center"> 
+      <h1 class="text-4xl font-bold text-pink-500 mb-2 mt-6">A Self-<span>Starter 🏁</span></h1>
+      <div class="text-lg text-gray-300 max-w-md mt-6 mb-6" ma>Taking initiative on my own to improve systems around me.</div>
+      <a class="mt-16 px-6 py-3 bg-pink-500 text-black font-bold rounded-full hover:bg-pink-400 transition" href="projects.html">View My Work</a>  
     </section>
 
-    <section class="featured">
-      <h2>Featured Work</h2>
-      <div class="project-list">
-        <ul>Accessibility Audit</ul>
+    <section class="mx-auto px-6 py-12 sm:py-24 max-w-5xl md:max-w-7xl relative rounded-3xl border-t border-slate-6 mt-20 flex flex-col items-center">
         <!-- Each item links to projects.html; later you can make separate case-study pages -->
+          <h1 class="text-4xl font-bold mb-8">My Projects</h1>
+        
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="p-6 rounded-2xl shadow-xl transition-transform duration-300 
+            bg-[radial-gradient(circle_at_center,hotpink,black)] 
+            hover:scale-105 hover:shadow-pink-500/50">
+  <h2 class="text-2xl font-semibold mb-2">Project One</h2>
+  <p class="text-gray-200">A cool project I built that showcases my design and coding skills.</p>
+</div>
+            <!-- Card 2 -->
+            <div class="p-6 rounded-2xl shadow-xl transition-transform duration-300 
+            bg-[radial-gradient(circle_at_top_left,hotpink,black)] 
+            hover:scale-105 hover:shadow-pink-500/50">
+  <h2 class="text-2xl font-semibold mb-2">Project One</h2>
+  <p class="text-gray-200">A cool project I built that showcases my design and coding skills.</p>
+</div>
+            <!-- Card 3 -->
+<div class="p-6 rounded-2xl shadow-xl transition-transform duration-300 
+            bg-[radial-gradient(circle_at_top_left,hotpink,black)] 
+            hover:scale-105 hover:shadow-pink-500/50">
+  <h2 class="text-2xl font-semibold mb-2">Project One</h2>
+  <p class="text-gray-200">A cool project I built that showcases my design and coding skills.</p>
+</div>
 
+</div>
+
+            </div>
+          </div>
+        </section>
+        
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+          var swiper = new Swiper(".mySwiper", { loop: true, autoplay: { delay: 3000 } });
+        </script>
+        
         <!-- add more thumbnails -->
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>Find me: <a href="https://www.linkedin.com">LinkedIn</a> • <a href="https://github.com/yourusername">GitHub</a></p>
-  </footer>
+    <footer class="p-6 border-t border-pink-500 text-center text-gray-400">
+      <p>Connect with me:</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/AndreaScales">LinkedIn</a>
+        <a href="https://github.com/AndreaScales">GitHub</a>
+        <a href="mailto:andreascales8@gmail.com">Email</a>
+        <p>© 2025 Andrea Scales | Built with 🩷 and Tailwind CSS</p>
+      </div>
+    </footer>
 </body>
 </html>

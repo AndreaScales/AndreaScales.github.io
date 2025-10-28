@@ -7,46 +7,69 @@
   <title>Andrea Scales — Product Designer</title>
   <link rel="stylesheet" href="assets/css/style.css">
 <script src="assets/js/script.js"></script>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
 <!--import TailwindCSS-->
 <script src="https://cdn.tailwindcss.com"></script>
+<!--Google Font family-->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
 </head>
-<body>
-  <header>
+<body class="bg-black text-gray-200 min-h-screen flex flex-col items-center justify-center">
+  
+  <header class="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-md z-50">
 
-   <!-- Navigation bar -->
-    <nav class="flex justify-between items-center p-6 bg-black border-b border-pink-500">
-      <h1 class="text-2xl font-bold text-pink-500">Andrea Scales</h1>
-      <div class="space-x-6">
-      <a href="index.html" class="text-white hover:text-pink-500 transition">Home</a>
-      <a href="projects.html" class="text-white hover:text-pink-500 transition">Projects</a>
-      <a href="about.html" class="text-white hover:text-pink-500 transition">About</a>
-      <a href="contact.html" class="text-white hover:text-pink-500 transition">Contact</a>
-      <a href="growthjournal.html" class="text-white hover:text-pink-500 transition">Growth Journal</a>
-      </div>
-    </nav>
+   <!-- Navigation bar-->
+   <ul class="flex justify-center items-center space-x-8 py-4">
+    <li class="flex-1 mr-2">
+      <a href="index.html" class="text-center block border border-pink-500 rounded py-2 px-4 bg-pink-500 hover:bg-pink-700 text-white" href="#">Home</a>
+    </li>
+    <li class="flex-1 mr-2">
+      <a href="projects.html" class="text-center block border border-white rounded hover:border-gray-200 text-pink-500 hover:bg-gray-200 py-2 px-4" href="#">Projects</a>
+    </li>
+    <li class="text-center flex-1">
+      <a href=contact.html class="block py-2 px-4 text-gray-400 cursor-not-allowed" href="#">Contact</a>
+    </li>
+    <li class="text-center flex-1">
+      <a href="about.html" class="block py-2 px-4 text-gray-400 cursor-not-allowed" href="#">About</a>
+    </li>
+  </ul>
   </header>
-
+  
   <!--Intro-->
   <main>
-    <section class="flex flex-col items-center justify-center h-screen text-center bg-gradient-to-b from-black to-gray-900 space-y-6"> <!--data-aos="fade-up"-->
-      <img src="assets/images/headshot.jpg" alt="Andrea Scales" class ="rounded-full w-32 h-32 mb-4 border-4 border-pink-500 shadow-lg">
-      <h1 class="text-4xl font-bold text-pink-500 mb-2">Hi, I'm <span>Andrea 👋</span></h1>
-      <p class="text-lg text-gray-300 max-w-md" ma>Aspiring Product Designer Apprentice | Innovator | Tech-Enthusiast | Creative Problem-Solver</p>
-      <a class="mt-16 px-6 py-3 bg-pink-500 text-black font-bold rounded-full hover:bg-pink-400 transition" href="projects.html">View My Work</a>  
+  <!--video background, intro text -->
+  <section class="mt-24 w-full h-screen overflow-hidden"> 
+    <video 
+    class="absolute top-0 left-0 w-full h-full object-cover"
+    autoplay 
+    muted 
+    loop 
+    playsinline
+  >
+    <source src="assets/videos/wireframe.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="absolute top-0 left-0 w-full h-full bg-black/50"></div>
+
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+      <h1 class="text-4xl font-bold text-pink-500 mb-2 mt-6">Hi, I'm <span>Andrea 👋</span></h1>
+      <p class="text-lg text-gray-300 max-w-md mt-6 mb-6" ma>Aspiring Product Designer Apprentice | Innovator | Tech-Enthusiast | Creative Problem-Solver</p>
+      <button class="mt-16 px-6 py-3 bg-pink-500 text-black font-bold rounded-full hover:bg-pink-400 transition" href="projects.html">View My Work</button>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-black z-10"></div>
     </section>
 
     <!--Pathways to PM section-->
-    <section class="py-16 bg-black text-center">
-      <h2 class="text-3x1 font-bold text-pink-500 mb-10">Pathways to PM</h2>
-
+    <section class="mx-auto px-6 py-12 py-16 sm:py-20 max-w-5xl md:max-w-7xl relative rounded-3xl border-t border-slate-6 flex flex-col items-center">
+      <h1 class="text-3x1 font-bold text-pink-500 mb-2">Pathways to PM</h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4x1 mx-auto">
-        <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
-          <h4 class="text-xl font-semibold text-white mb-2">Ambassador Leadership</h4>
+        <div class="bg-hotpink-900 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
+          <h4 class="text-xl font-semibold text-white mb-2">Langston University Ambassador</h4>
           <p class="text-gray-400 text-sm">Empowering campus unity as Training Chair for LUAO.</p>
         </div>
 
-        <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
+        <div class="bg-pink p-6 rounded-xl shadow-lg hover:scale-105 transform transition">
           <h4 class="text-xl font-semibold text-white mb-2">Development Project Manager</h4>
           <p class="text-gray-400 text-sm">Assisting Paycom’s project teams as a Development Project Manager Intern.</p>
         </div>
@@ -60,7 +83,7 @@
       <div class="card">Spotify Recommendation App</div>
       <div class="card">AI Assistant (OpenAI API)</div>
       <div class="card">Custom Dreams Branding</div>
-    </div>
+    </div> 
   </section>
 
 
@@ -73,7 +96,7 @@
       <a href="https://www.linkedin.com/in/AndreaScales">LinkedIn</a>
       <a href="https://github.com/AndreaScales">GitHub</a>
       <a href="mailto:andreascales8@gmail.com">Email</a>
-      <p>© 2025 Andrea Scales | Built with ❤️ and Tailwind CSS</p>
+      <p>© 2025 Andrea Scales | Built with 🩷 and Tailwind CSS</p>
     </div>
   </footer>
 
@@ -82,15 +105,6 @@
 <script>
   AOS.init();
 </script>
-
-<!--GSAP(GreenSock Animation Platform) library-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-
-<!--Three.js-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-<!--Typed.js-->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 </body>
 </html>
