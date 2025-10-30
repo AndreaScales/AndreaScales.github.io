@@ -10,6 +10,9 @@
 /* Basic reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+body {
+  font-family: 'Bebas Neue', sans-serif;
+}
 /*navigation bar*/
 .nav-bar {
   position: sticky;
