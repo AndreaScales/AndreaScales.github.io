@@ -185,6 +185,30 @@ body {
     transform: translateY(-10px);
     box-shadow: 0 0 40px hotpink;
   }
+  
+  .poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    transition: 0.3 ease;
+    filter: drop-shadow(0 0 10px white);
+  }
+
+  .social-link:hover {
+    filter: drop-shadow(0 0 10px hotpink) brightness (1.2);
+    transform: scale(1.1);
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
 
   /* FOOTER */
 .footer {

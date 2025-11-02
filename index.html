@@ -10,18 +10,18 @@
 
 <script src="assets/js/script.js"></script>
 
-<!--import TailwindCSS-->
-<script src="https://cdn.tailwindcss.com"></script>
 <!--Google Font family-->
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!--import TailwindCSS-->
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black text-gray-200 min-h-screen flex flex-col items-center justify-center">
   
   <header class="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-md z-50">
 
    <!-- Navigation bar-->
-   <ul class="flex justify-center items-center space-x-8 py-4">
+   <ul class="font-['Bebas_Neue'] flex justify-center items-center space-x-8 py-4">
     <li class="flex-1 mr-2">
       <a href="index.html" class="text-center block border border-pink-500 rounded py-2 px-4 bg-pink-500 hover:bg-pink-700 text-white" href="#">Home</a>
     </li>
@@ -55,8 +55,8 @@
   <div class="absolute top-0 left-0 w-full h-full bg-black/50"></div>
 
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-      <h1 class="text-4xl font-bold text-pink-500 mb-2 mt-6 font-bebas-neue">Hi, I'm <span>Andrea 👋</span></h1>
-      <p class="text-lg text-gray-300 max-w-md mt-6 mb-6" ma>Aspiring Product Designer Apprentice | Innovator | Tech-Enthusiast | Creative Problem-Solver</p>
+      <h1 class="font-['Bebas_Neue'] text-4xl font-bold text-pink-500 mb-2 mt-6">Hi, I'm <span>Andrea 👋</span></h1>
+      <p class="font-['Inter'] text-lg text-gray-300 max-w-md mt-6 mb-6" ma>Aspiring Product Designer Apprentice | Innovator | Tech-Enthusiast | Creative Problem-Solver</p>
       <button class="mt-16 px-6 py-3 bg-pink-500 text-black font-bold rounded-full hover:bg-pink-400 transition" href="projects.html">View My Work</button>
     </div>
     <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-black z-10"></div>
@@ -97,18 +97,18 @@
   <footer class="p-6 border-t border-pink-500 text-center text-gray-400">
     <p>Connect with me:</p>
     <div class="social-icons">
-      <a href="https://www.linkedin.com/in/AndreaScales">LinkedIn</a>
-      <a href="https://github.com/AndreaScales">GitHub</a>
-      <a href="mailto:andreascales8@gmail.com">Email</a>
-      <p>© 2025 Andrea Scales | Built with 🩷 and Tailwind CSS</p>
+      <a href="https://www.linkedin.com/in/AndreaScales" target="_blank">
+        <img src="assets/images/socialicons/linkedin.png" alt= "LinkedIn Logo" width="100" class= "social-link">
+      </a>
+      <a href="https://github.com/AndreaScales" target="_blank">
+        <img src="assets/images/socialicons/github.png" alt= "GitHub Logo" class="social-link">
+      </a>
+      <a href="mailto:andreascales8@gmail.com" target="_blank">
+        <img src="assets/images/socialicons/gmail.png" alt="Gmail Logo" class="social-link">
+      </a>
     </div>
+    <p>© 2025 Andrea Scales | Built with 🩷 and Tailwind CSS</p>
   </footer>
-
-  <!--Data AOS animation-->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
 
 </body>
 </html>
