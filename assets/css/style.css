@@ -192,6 +192,67 @@ body {
     font-style: normal;
   }
 
+  /*Contact Form*/
+  .contact-section {
+    margin-top: 100px;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 10px hotpink;
+    text-align: center;
+  }
+
+  .contact-section h1 {
+    color: hotpink;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+  }
+
+  label {
+    font-weight: bold;
+    color: #ffb6c1;
+  }
+  
+  input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #222;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  input:focus, textarea:focus {
+    box-shadow: 0 0 5px hotpink;
+  }
+  
+  button {
+    background-color: hotpink;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover {
+    background-color: #ff69b4;
+    box-shadow: 0 0 10px hotpink;
+    transform: scale(1.05);
+  }
+  /*Social Icons*/
   .social-link {
     width: 40px;
     height: 40px;

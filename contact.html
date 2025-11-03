@@ -30,10 +30,22 @@
    
   <body>
   <main>
-    <section class="mt-24">
-    <h1>Contact</h1>
-    <p>Thanks for visiting! Email me: <a href="mailto:andreascales8@gmail.com">andreascales8@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/AndreaScales">andrea</a></p>
+    <section class="mt-24"> <!--change class, look at CSS-->
+    <h1>Contact Me</h1>
+    <p>Have a question or want to work together? Send me a message below!</p>
+    
+    <form class="contact-form" action="#" method="post">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name 🔤" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email 📧" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+      
+      <button type="submit">Send Message</button>
+    </form>
     </section>
   </main>
   
